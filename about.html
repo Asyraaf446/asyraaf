@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me | My Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Table Styling */
+        .about-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .about-table td {
+            padding: 12px 15px;
+            border-bottom: 1px solid #C4B9AC;
+            vertical-align: top;
+        }
+
+        .label {
+            font-weight: bold;
+            text-transform: uppercase;
+            font-size: 0.7rem;
+            color: #8b7d6b;
+            width: 30%;
+            letter-spacing: 1px;
+        }
+
+        .value {
+            font-family: 'Georgia', serif;
+            color: #333;
+            font-size: 0.95rem;
+        }
+
+        /* Sound Icon Styling */
+        .sound-btn {
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            background: #D6CEC3;
+            border-radius: 50%;
+            width: 20px;
+            height: 20px;
+            font-size: 10px;
+            margin-left: 5px;
+            transition: 0.3s;
+            border: 1px solid #A89E91;
+            vertical-align: middle;
+        }
+
+        .sound-btn:hover {
+            background-color: #8b7d6b;
+            color: white;
+        }
+
+        .story-label {
+            background-color: #D6CEC3;
+            font-weight: bold;
+            text-transform: uppercase;
+            font-size: 0.7rem;
+            padding: 10px 15px;
+            letter-spacing: 1px;
+        }
+
+        .story-text {
+            padding: 20px 15px !important;
+            line-height: 1.6;
+            text-align: justify;
+            font-style: italic;
+            color: #555;
+        }
+
+        /* Playlist Section Styling */
+        .playlist-container {
+            margin-top: 40px;
+            padding: 30px;
+            background-color: #E6DED3; 
+            border: 1px solid #C4B9AC;
+        }
+
+        .playlist-header {
+            border-bottom: 2px solid #8b7d6b;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: #1a1a1a;
+        }
+
+        .current-track {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            margin-bottom: 25px;
+            background: rgba(255,255,255,0.3);
+            padding: 15px;
+        }
+
+        .album-art {
+            width: 80px;
+            height: 80px;
+            background-color: #D6CEC3;
+            border: 1px solid #A89E91;
+            overflow: hidden;
+        }
+
+        .album-art img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .track-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .track-item {
+            padding: 10px 15px;
+            border-bottom: 1px solid rgba(139, 125, 107, 0.3);
+            cursor: pointer;
+            transition: 0.3s;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .track-item:hover {
+            background-color: rgba(139, 125, 107, 0.1);
+        }
+
+        .track-item.active {
+            background-color: #8b7d6b;
+            color: white;
+        }
+
+        audio {
+            width: 100%;
+            height: 40px;
+        }
+    </style>
+</head>
+<body>
+
+<nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About Me</a>
+    <a href="education.html">Education</a>
+    <a href="experience.html">Experience</a>
+    <a href="family.html">Family</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="contact.html">Contact</a>
+</nav>
+
+<div class="container">
+    <div class="hero-box">
+        <div class="hero-image-placeholder" style="flex: 0 0 350px; height: 650px;"> 
+            <img src="image/acapmuda.jpg" alt="Profile" style="width:100%; height:100%; object-fit:cover;">
+        </div>
+
+        <div class="hero-text" style="padding-left: 40px;">
+            <h2 style="margin-top: 0; border-bottom: 2px solid #C4B9AC; padding-bottom: 10px;">Personal Profile</h2>
+            
+            <table class="about-table">
+                <tr>
+                    <td class="label">Full Name</td>
+                    <td class="value">Asyraaf bin Daud</td>
+                </tr>
+                <tr>
+                    <td class="label">Birthday</td>
+                    <td class="value">4 February 2005</td>
+                </tr>
+                <tr>
+                    <td class="label">Birth Place</td>
+                    <td class="value">Selayang, Selangor</td>
+                </tr>
+                <tr>
+                    <td class="label">Education</td>
+                    <td class="value">Dip. Information Management (UiTM)</td>
+                </tr>
+                <tr>
+                    <td class="label">Favorite Food</td>
+                    <td class="value">Nasi Goreng</td>
+                </tr>
+                <tr>
+                    <td class="label">Life Motto</td>
+                    <td class="value">“Cherish every moment with loved ones.”</td>
+                </tr>
+                <tr>
+                    <td class="label">Skills</td>
+                    <td class="value">Coding</td>
+                </tr>
+                <tr>
+                    <td colspan="2" class="story-label">My Story & Aspirations</td>
+                </tr>
+                <tr>
+                    <td colspan="2" class="story-text">
+                        Hello! I'm Asyraaf bin Daud, a full-time student pursuing a Diploma in Information Management at Universiti Teknologi Mara (UiTM) Rembau. As the fourth of five siblings, family has always been my primary support system. 
+                        <br><br>
+                        Beyond my academic life, I am an enthusiast of the great outdoors. You can often find me hiking local trails or jogging to keep my mind and body sharp. Traveling is my ultimate passion; my goal is to explore the natural beauty of New Zealand one day. 
+                        <br><br>
+                        Technically, I am fascinated by the intersection of information and technology. I spend a significant amount of time mastering coding because I want to develop applications that solve real-world problems. My entrepreneurial spirit drives me toward a future where I can lead my own tech-startups. I believe that being "rich" isn't just about the dream car, but about the freedom to create and innovate.
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+    <audio id="skill-audio"></audio>
+
+    <div class="playlist-container">
+        <h2 class="playlist-header">Now Playing</h2>
+        
+        <div class="current-track">
+            <div class="album-art">
+                <img id="current-cover" src="image/berdua.jpg" alt="Cover">
+            </div>
+            <div style="flex-grow: 1;">
+                <p id="track-title" style="margin: 0; font-weight: bold;">Wave To Earth - Love</p>
+                <audio id="main-player" controls>
+                    <source id="player-source" src="audio/wave to earth - love. (Official Lyric Video).mp3" type="audio/mpeg">
+                </audio>
+            </div>
+        </div>
+
+        <ul class="track-list">
+            <li class="track-item active" onclick="changeTrack('audio/wave to earth - love. (Official Lyric Video).mp3', 'image/berdua.jpg', 'Wave To Earth - Love')">
+                <span>01. Wave To Earth - Love</span>
+                <span>4:15</span>
+            </li>
+        </ul>
+    </div>
+</div>
+
+<footer style="text-align: center; margin-top: 50px; padding: 20px; font-size: 0.8rem; color: #888;">
+    Individual Assignment &bull; Built with VS Code &bull; 2026
+</footer>
+
+<script>
+    // Function for Skill Sounds
+    function playSkill(soundSrc) {
+        const skillPlayer = document.getElementById('skill-audio');
+        skillPlayer.src = soundSrc;
+        skillPlayer.play();
+    }
+
+    // Function for Playlist
+    function changeTrack(audioSrc, imageSrc, title) {
+        const player = document.getElementById('main-player');
+        const source = document.getElementById('player-source');
+        const cover = document.getElementById('current-cover');
+        const titleText = document.getElementById('track-title');
+
+        source.src = audioSrc;
+        cover.src = imageSrc;
+        titleText.innerText = title;
+        
+        player.load();
+        player.play();
+
+        const items = document.querySelectorAll('.track-item');
+        items.forEach(item => item.classList.remove('active'));
+        event.currentTarget.classList.add('active');
+    }
+</script>
+
+</body>
+</html>
