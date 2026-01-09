@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Personal Website</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Social Media Section Styling */
+        .social-contact-section {
+            margin-top: 40px;
+            padding: 20px;
+            background-color: #E6DED3; /* Beige theme */
+            border: 1px solid #C4B9AC;
+            text-align: center;
+        }
+
+        .social-container {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-top: 15px;
+        }
+
+        .social-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-decoration: none;
+            color: #1a1a1a;
+            transition: transform 0.3s;
+        }
+
+        .social-item:hover {
+            transform: translateY(-5px);
+        }
+
+        /* Small Picture Space for Logos */
+        .logo-space {
+            width: 50px;
+            height: 50px;
+            background-color: #D6CEC3;
+            border-radius: 50%; /* Makes it circular */
+            border: 1px solid #A89E91;
+            margin-bottom: 8px;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .logo-space img {
+            width: 70%; /* Size of the logo inside the circle */
+            height: 70%;
+            object-fit: contain;
+        }
+
+        .social-label {
+            font-size: 0.8rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About Me</a>
+        <a href="education.html">Education</a>
+        <a href="experience.html">Experience</a>
+        <a href="family.html">Family</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+
+    <div class="container">
+        <h1>Contact Me</h1>
+        
+        <div style="display: flex; gap: 40px; align-items: stretch;">
+            <div style="flex: 1;">
+                <form>
+                    <label>Name:</label>
+                    <input type="text" placeholder="Your Name">
+                    <label>Email:</label>
+                    <input type="email" placeholder="Your Email">
+                    <label>Message:</label>
+                    <textarea rows="5" placeholder="Write something..."></textarea>
+                    <button type="submit">Submit</button>
+                </form>
+            </div>
+            
+            <div style="flex: 1;">
+                <div class="grid-item" style="height: 100%; display: flex; align-items: center; justify-content: center; border: 1px solid #C4B9AC;">
+                    <img src="image/Screenshot (203).png" alt="My Location Map" style="width: 100%; height: 100%; object-fit: cover;">
+                </div>
+            </div>
+        </div>
+
+        <div class="social-contact-section">
+            <p style="margin: 0; font-style: italic; color: #666;">Follow me on social media</p>
+            <div class="social-container">
+                
+                <a href="https://www.instagram.com/_.asyf/" class="social-item" target="_blank">
+                    <div class="logo-space">
+                        <img src="image/insta.png" alt="Instagram">
+                    </div>
+                    <span class="social-label">Instagram</span>
+                </a>
+
+                <a href="https://www.tiktok.com/@caps_lovk" class="social-item" target="_blank">
+                    <div class="logo-space">
+                        <img src="image/unnamed.png" alt="TikTok">
+                    </div>
+                    <span class="social-label">TikTok</span>
+                </a>
+
+            </div>
+        </div>
+    </div>
+
+    <footer style="text-align: center; margin-top: 50px; padding: 20px; font-size: 0.8rem; color: #888;">
+        &copy; 2026 Individual Assignment &bull; Contact Page
+    </footer>
+</body>
+</html>

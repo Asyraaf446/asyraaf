@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Family - My Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Family Grid Styling */
+        .family-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr); /* Creates 3 equal columns */
+            gap: 25px;
+            margin-top: 30px;
+        }
+
+        .family-card {
+            background-color: #E6DED3; /* Beige theme */
+            border: 1px solid #C4B9AC;
+            overflow: hidden;
+            box-shadow: 8px 8px 0px rgba(0,0,0,0.05);
+            transition: transform 0.3s ease;
+        }
+
+        .family-card:hover {
+            transform: translateY(-10px);
+        }
+
+        /* Fixed Image Box for Family Photos */
+        .family-img-box {
+            height: 300px;
+            background-color: #D6CEC3;
+            border-bottom: 1px solid #C4B9AC;
+            overflow: hidden;
+        }
+
+        .family-img-box img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* Ensures photos fit perfectly without stretching */
+            display: block;
+        }
+
+        .family-info {
+            padding: 20px;
+            text-align: center;
+        }
+
+        .family-info h3 {
+            margin: 0 0 10px 0;
+            font-size: 1.2rem;
+            color: #1a1a1a;
+        }
+
+        .family-info p {
+            font-size: 0.9rem;
+            color: #666;
+            line-height: 1.4;
+            margin: 0;
+        }
+
+        /* Footer and Top Button Styling */
+        footer {
+            background-color: #E6DED3;
+            border-top: 1px solid #C4B9AC;
+            padding: 40px 0;
+            margin-top: 80px;
+            text-align: center;
+        }
+
+        #topBtn {
+            display: none; 
+            position: fixed; 
+            bottom: 30px; 
+            right: 30px; 
+            z-index: 100; 
+            border: none;
+            background-color: #8b7d6b;
+            color: white;
+            padding: 15px;
+            border-radius: 50%; 
+            width: 50px;
+            height: 50px;
+            cursor: pointer;
+            box-shadow: 0px 4px 10px rgba(0,0,0,0.3);
+        }
+
+        @media (max-width: 900px) {
+            .family-grid { grid-template-columns: 1fr; } /* Stack on mobile */
+        }
+    </style>
+</head>
+<body>
+
+<nav>
+    <a href="index.html">HOME</a>
+    <a href="about.html">ABOUT ME</a>
+    <a href="education.html">EDUCATION</a>
+    <a href="experience.html">EXPERIENCE</a>
+    <a href="family.html">FAMILY</a>
+    <a href="gallery.html">GALLERY</a>
+    <a href="contact.html">CONTACT</a>
+</nav>
+
+<div class="container">
+    <h1>My Family</h1>
+    <p style="margin-bottom: 40px; font-style: italic;">The people who inspire and support me every day.</p>
+
+    <div class="family-grid">
+        <div class="family-card">
+            <div class="family-img-box">
+                <img src="image/family1.jpg" alt="Father">
+            </div>
+            <div class="family-info">
+                <p>Family is very important to me, as they give me constant support, encouragement, and motivation in everything I do.</p>
+            </div>
+        </div>
+
+        <div class="family-card">
+            <div class="family-img-box">
+                <img src="image/family2.jpg" alt="Mother">
+            </div>
+            <div class="family-info">
+                <p>I come from a supportive family who always encourage me to work hard and achieve my goals.</p>
+            </div>
+        </div>
+
+        <div class="family-card">
+            <div class="family-img-box">
+                <img src="image/family3.jpg" alt="Sibling">
+            </div>
+            <div class="family-info">
+                <p>My family is my greatest source of strength and inspiration.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<footer>
+    <div class="footer-content">
+        <p onclick="topFunction()" style="cursor:pointer; font-weight:bold; text-decoration:underline;">Return to the Top ↑</p>
+        <p>&copy; 2026 Asyraaf Portfolio &bull; Family Section</p>
+    </div>
+</footer>
+
+<button onclick="topFunction()" id="topBtn">↑</button>
+
+<script>
+    let mybutton = document.getElementById("topBtn");
+    window.onscroll = function() {
+        if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+            mybutton.style.display = "block";
+        } else {
+            mybutton.style.display = "none";
+        }
+    };
+    function topFunction() {
+        window.scrollTo({top: 0, behavior: 'smooth'});
+    }
+</script>
+
+</body>
+</html>

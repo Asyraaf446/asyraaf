@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Experience - My Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Section Styling */
+        .exp-section {
+            margin-bottom: 50px;
+        }
+
+        .section-title {
+            font-family: 'Segoe UI', sans-serif;
+            font-size: 1.8rem;
+            border-bottom: 2px solid #C4B9AC;
+            padding-bottom: 10px;
+            margin-bottom: 30px;
+            color: #1a1a1a;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        /* Experience Card Layout */
+        .exp-card {
+            display: flex;
+            background-color: #E6DED3; /* Beige theme matching your image */
+            border: 1px solid #C4B9AC;
+            overflow: hidden;
+            min-height: 350px;
+            box-shadow: 10px 10px 0px rgba(0,0,0,0.05);
+        }
+
+        /* Image Box - FIXED */
+        .exp-img-box {
+            flex: 0 0 40%; /* Image takes 40% width */
+            background-color: #D6CEC3;
+            border-right: 1px solid #C4B9AC;
+            overflow: hidden;
+        }
+
+        .exp-img-box img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* Forces picture to fit perfectly */
+            display: block;
+        }
+
+        /* Content Box */
+        .exp-content {
+            flex: 1; 
+            padding: 40px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .exp-content h3 {
+            margin: 0 0 10px 0;
+            font-size: 1.5rem;
+            color: #1a1a1a;
+        }
+
+        .company-name {
+            font-weight: bold;
+            color: #8b7d6b;
+            margin-bottom: 15px;
+            display: block;
+            text-transform: uppercase;
+            font-size: 0.85rem;
+        }
+
+        .exp-list {
+            padding-left: 20px;
+            margin: 0;
+            line-height: 1.8;
+            color: #444;
+        }
+
+        .social-icons {
+            display: flex;
+            gap: 15px;
+            align-items: center;
+            justify-content: center; 
+            margin: 40px auto;      
+        }
+
+        .social-icons a {
+            text-decoration: none;
+            color: #1a1a1a;
+            border: 1px solid #1a1a1a;
+            padding: 8px 25px; 
+            border-radius: 25px;
+            font-size: 0.8rem;
+            transition: 0.3s;
+        }
+
+        .social-icons a:hover {
+            background-color: #1a1a1a;
+            color: #fff;
+        }
+
+        /* Footer Styles */
+        footer {
+            background-color: #E6DED3;
+            border-top: 1px solid #C4B9AC;
+            padding: 40px 0;
+            margin-top: 80px;
+            text-align: center;
+        }
+
+        .back-to-top-link {
+            display: inline-block;
+            margin-bottom: 15px;
+            font-weight: bold;
+            cursor: pointer;
+            text-decoration: underline;
+            font-size: 0.9rem;
+        }
+
+        /* Floating Return to Top Button */
+        #topBtn {
+            display: none; 
+            position: fixed; 
+            bottom: 30px; 
+            right: 30px; 
+            z-index: 100; 
+            border: none;
+            background-color: #8b7d6b;
+            color: white;
+            cursor: pointer;
+            padding: 15px;
+            border-radius: 50%; 
+            width: 50px;
+            height: 50px;
+            box-shadow: 0px 4px 10px rgba(0,0,0,0.3);
+            transition: 0.3s;
+        }
+
+        #topBtn:hover {
+            background-color: #1a1a1a;
+            transform: translateY(-5px);
+        }
+
+        @media (max-width: 768px) {
+            .exp-card { flex-direction: column; }
+            .exp-img-box { flex: 0 0 250px; border-right: none; }
+        }
+    </style>
+</head>
+<body>
+
+<nav>
+    <a href="index.html">HOME</a>
+    <a href="about.html">ABOUT ME</a>
+    <a href="education.html">EDUCATION</a>
+    <a href="experience.html">EXPERIENCE</a>
+    <a href="family.html">FAMILY</a>
+    <a href="gallery.html">GALLERY</a>
+    <a href="contact.html">CONTACT</a>
+</nav>
+
+<div class="container">
+    <h1>Personal Experience</h1>
+    <p style="margin-bottom: 40px; font-style: italic;">A summary of my journey.</p>
+
+    <div class="exp-section">
+        <h2 class="section-title">01. Internship</h2>
+        <div class="exp-card">
+            <div class="exp-img-box">
+                <img src="image/apm.jpg" alt="Internship at Company">
+            </div>
+            <div class="exp-content">
+                <h3>Purchasing Department</h3>
+                <span class="company-name">Auto Parts Manufacture Co Sdn Bhd (APM) | 2025</span>
+                <ul class="exp-list">
+                    <li>Purchase goods, materials, and supplies needed by the organization.</li>
+                    <li>Source and communicate with suppliers to obtain quotations and product information.</li>
+                    <li>Monitor stock levels and ensure timely replenishment of items.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="exp-section">
+        <h2 class="section-title">02. Job Experience</h2>
+        <div class="exp-card">
+            <div class="exp-img-box">
+                <img src="image/mydin.jpg" alt="Job Experience">
+            </div>
+            <div class="exp-content">
+                <h3>Sales Assistant</h3>
+                <span class="company-name">MYDIN Mohamed Holdings Berhad | 2025</span>
+                <ul class="exp-list">
+                    <li>Promote and sell products to achieve daily or monthly sales targets.</li>
+                    <li>Arrange, display, and restock products on shelves neatly.</li>
+                    <li>Monitor stock levels and inform the supervisor when items need to be replenished.</li>
+                </ul>
+            </div>
+        </div>
+        <div class="exp-card">
+            <div class="exp-img-box">
+                <img src="image/mindef.png" alt="Job Experience">
+            </div>
+            <div class="exp-content">
+                <h3>Kitchen Helper</h3>
+                <span class="company-name">Ministry of Defence (MinDef) | 2023</span>
+                <ul class="exp-list">
+                    <li>Keep the kitchen clean by washing dishes, utensils, and kitchen equipment.</li>
+                    <li>Ensure cleanliness of work areas according to hygiene and safety standards.</li>
+                    <li>Assist in basic cooking tasks when required.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="social-icons">
+        <a href="files/resumeacap.pdf" target="_blank">RESUME</a>
+    </div>
+
+<footer>
+    <div class="footer-content">
+        <p class="back-to-top-link" onclick="topFunction()">Return to the Top ↑</p>
+        <div class="footer-bottom-text">
+            <p>&copy; 2026 Asyraaf Portfolio. Individual Assignment.</p>
+        </div>
+    </div>
+</footer>
+
+<button onclick="topFunction()" id="topBtn" title="Go to top">↑</button>
+
+<script>
+    // Get the button
+    let mybutton = document.getElementById("topBtn");
+
+    // Scroll detection
+    window.onscroll = function() {scrollFunction()};
+
+    function scrollFunction() {
+        if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+            mybutton.style.display = "block";
+        } else {
+            mybutton.style.display = "none";
+        }
+    }
+
+    // Smooth scroll to top
+    function topFunction() {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    }
+</script>
+
+</body>
+</html>

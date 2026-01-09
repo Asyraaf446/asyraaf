@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Gallery - Click to Expand</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* --- Grid Styling --- */
+        .category-title {
+            font-family: 'Georgia', serif;
+            border-bottom: 2px solid #C4B9AC;
+            padding-bottom: 10px;
+            margin: 60px 0 20px 0;
+            text-transform: uppercase;
+            font-size: 1.2rem;
+            color: #8b7d6b;
+            letter-spacing: 2px;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+            padding: 10px 0;
+        }
+
+        .grid-item {
+            height: 250px; 
+            overflow: hidden; 
+            border: 1px solid #A89E91;
+            cursor: pointer; 
+            position: relative;
+            background-color: #f0f0f0;
+        }
+
+        .grid-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; 
+            transition: 0.3s;
+        }
+
+        .grid-item:hover img {
+            opacity: 0.7;
+            transform: scale(1.05);
+        }
+
+        /* --- Modal Styling --- */
+        .modal {
+            display: none; 
+            position: fixed;
+            z-index: 1000;
+            padding-top: 50px;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.9);
+        }
+
+        .modal-content {
+            margin: auto;
+            display: block;
+            max-width: 85%;
+            max-height: 80%;
+            border: 5px solid white;
+            animation: zoom 0.3s;
+        }
+
+        @keyframes zoom {
+            from {transform:scale(0)} 
+            to {transform:scale(1)}
+        }
+
+        .close {
+            position: absolute;
+            top: 20px;
+            right: 35px;
+            color: #fff;
+            font-size: 40px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        #caption {
+            margin: auto;
+            display: block;
+            width: 80%;
+            text-align: center;
+            color: #ccc;
+            padding: 10px 0;
+            font-family: sans-serif;
+        }
+
+        /* --- RETURN TO TOP BUTTON STYLING --- */
+        #topBtn {
+            display: none; /* Hidden by default */
+            position: fixed; 
+            bottom: 30px; 
+            right: 30px; 
+            z-index: 99; 
+            border: none;
+            outline: none;
+            background-color: #8b7d6b; /* Matches your theme color */
+            color: white;
+            cursor: pointer;
+            padding: 15px;
+            border-radius: 50%; 
+            font-size: 18px;
+            width: 50px;
+            height: 50px;
+            box-shadow: 2px 2px 10px rgba(0,0,0,0.2);
+            transition: background-color 0.3s, transform 0.3s;
+        }
+
+        #topBtn:hover {
+            background-color: #1a1a1a; 
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+<body>
+
+<nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About Me</a>
+    <a href="education.html">Education</a>
+    <a href="experience.html">Experience</a>
+    <a href="family.html">Family</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="contact.html">Contact</a>
+</nav>
+
+<div class="container">
+    <h1>My Gallery</h1>
+    <p style="font-style: italic; color: #666;">Moments captured through my lens. Click to expand.</p>
+
+    <h2 class="category-title">General Moments</h2>
+    <div class="grid">
+        <div class="grid-item">
+            <img src="image/IMG-20260108-WA0038.jpg" onclick="expandImg(this)">
+        </div>
+        <div class="grid-item">
+            <img src="image/adlinsilmiacap.jpg" onclick="expandImg(this)">
+        </div>
+        <div class="grid-item">
+            <img src="image/archive.jpg" onclick="expandImg(this)">
+        </div>
+        <div class="grid-item">
+            <img src="image/lepaspresent.jpg" onclick="expandImg(this)">
+        </div>
+        <div class="grid-item">
+            <img src="image/record.jpg" onclick="expandImg(this)">
+        </div>
+        <div class="grid-item">
+            <img src="image/dekansem3.jpg" onclick="expandImg(this)">
+        </div>
+        <div class="grid-item">
+            <img src="image/matahari.jpg" onclick="expandImg(this)">
+        </div>
+        <div class="grid-item">
+            <img src="image/sungai.jpg" onclick="expandImg(this)">
+        </div>
+        <div class="grid-item">
+            <img src="image/datok.jpg" onclick="expandImg(this)">
+        </div>
+        <div class="grid-item">
+            <img src="image/datok2.jpg" onclick="expandImg(this)">
+        </div>
+        <div class="grid-item">
+            <img src="image/wayang.jpg" onclick="expandImg(this)">
+        </div>
+        <div class="grid-item">
+            <img src="image/filter.jpg" onclick="expandImg(this)">
+        </div>
+        <div class="grid-item">
+            <img src="image/moment1.jpg" onclick="expandImg(this)">
+        </div>
+        <div class="grid-item">
+            <img src="image/moment2.jpg" onclick="expandImg(this)">
+        </div>
+        <div class="grid-item">
+            <img src="image/moment3.jpg" onclick="expandImg(this)">
+        </div>
+        <div class="grid-item">
+            <img src="image/moment4.jpg" onclick="expandImg(this)">
+        </div>
+        <div class="grid-item">
+            <img src="image/moment5.jpg" onclick="expandImg(this)">
+        </div>
+        <div class="grid-item">
+            <img src="image/moment6.jpg" onclick="expandImg(this)">
+        </div>
+    </div>
+
+    <h2 class="category-title">Sunset Collection</h2>
+    <div class="grid">
+        <div class="grid-item">
+            <img src="image/sunset1.jpg" onclick="expandImg(this)">
+        </div>
+        <div class="grid-item">
+            <img src="image/sunset2.jpg" onclick="expandImg(this)">
+        </div>
+        <div class="grid-item">
+            <img src="image/sunset3.jpg" onclick="expandImg(this)">
+        </div>
+        <div class="grid-item">
+            <img src="image/sunset4.jpg" onclick="expandImg(this)">
+        </div>
+        <div class="grid-item">
+            <img src="image/sunset5.jpg" onclick="expandImg(this)">
+        </div>
+        <div class="grid-item">
+            <img src="image/sunset6.jpg" onclick="expandImg(this)">
+        </div>
+    </div>
+</div>
+
+<button onclick="topFunction()" id="topBtn" title="Go to top">↑</button>
+
+<div id="myModal" class="modal">
+    <span class="close" onclick="closeModal()">&times;</span>
+    <img class="modal-content" id="imgExpanded">
+    <div id="caption"></div>
+</div>
+
+<script>
+    // Gallery Modal Logic
+    function expandImg(element) {
+        var modal = document.getElementById("myModal");
+        var expandedImg = document.getElementById("imgExpanded");
+        
+        modal.style.display = "block";
+        expandedImg.src = element.src;
+    }
+
+    function closeModal() {
+        document.getElementById("myModal").style.display = "none";
+    }
+
+    // Handle clicks outside the modal
+    window.onclick = function(event) {
+        var modal = document.getElementById("myModal");
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    }
+
+    // RETURN TO TOP LOGIC
+    let mybutton = document.getElementById("topBtn");
+
+    // Show button when user scrolls down 100px
+    window.onscroll = function() {scrollFunction()};
+
+    function scrollFunction() {
+        if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+            mybutton.style.display = "block";
+        } else {
+            mybutton.style.display = "none";
+        }
+    }
+
+    // Scroll to top with smooth behavior
+    function topFunction() {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    }
+</script>
+</body>
+</html>
